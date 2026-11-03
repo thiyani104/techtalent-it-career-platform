@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Soft Shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="16" stdDeviation="12" flood-color="#071930" flood-opacity="0.32" />
+    </filter>
+
+    <!-- Node Sphere Radial Glow -->
+    <radialGradient id="sphereGlow" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#bbf7d0" />
+      <stop offset="25%" stop-color="#5eead4" />
+      <stop offset="60%" stop-color="#14b8a6" />
+      <stop offset="90%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#042f2e" />
+    </radialGradient>
+
+    <!-- Node Sphere Dark (Back nodes) -->
+    <radialGradient id="sphereDark" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="35%" stop-color="#0891b2" />
+      <stop offset="75%" stop-color="#164e63" />
+      <stop offset="100%" stop-color="#082f49" />
+    </radialGradient>
+
+    <!-- Main Front Arrow Face Gradient -->
+    <linearGradient id="arrowFaceGrad" x1="0%" y1="100%" x2="70%" y2="0%">
+      <stop offset="0%" stop-color="#1d72cd" />
+      <stop offset="45%" stop-color="#2d87e8" />
+      <stop offset="100%" stop-color="#4aa9ff" />
+    </linearGradient>
+
+    <!-- Upward Arrow Bevel / Lateral Side -->
+    <linearGradient id="arrowBevelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e5899" />
+      <stop offset="100%" stop-color="#0a2a4f" />
+    </linearGradient>
+
+    <!-- Deep Blue Front Stem Gradient -->
+    <linearGradient id="frontStemGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#12487e" />
+      <stop offset="50%" stop-color="#0f3c69" />
+      <stop offset="100%" stop-color="#09223c" />
+    </linearGradient>
+
+    <!-- Deep Left Outer Extrusion -->
+    <linearGradient id="outerExtrudeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3b5c" />
+      <stop offset="100%" stop-color="#051424" />
+    </linearGradient>
+
+    <!-- Isometric Top Caps -->
+    <linearGradient id="isoTopGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2575c0" />
+      <stop offset="100%" stop-color="#56b4ff" />
+    </linearGradient>
+
+    <!-- Chrome Connector Cylinders -->
+    <linearGradient id="connectorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#042f2e" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#softShadow)">
+
+    <!-- LAYER 1: Deep Navy Left/Base Extruded Block -->
+    <!-- Extruded Rim / Border Layer -->
+    <path d="M 68 290 L 140 248 L 152 248 L 225 248 L 225 315 L 172 315 L 172 468 L 152 478 L 140 458 L 140 300 L 92 300 L 68 290 Z" fill="url(#outerExtrudeGrad)" stroke="#0e2a47" stroke-width="3" stroke-linejoin="round" />
+    
+    <!-- Top Cap of Base Block -->
+    <polygon points="140,248 238,248 274,204 176,204" fill="url(#isoTopGrad)" stroke="#60a5fa" stroke-width="2" />
+    
+    <!-- Front Facing T-Stem Face -->
+    <polygon points="148,252 220,252 220,310 172,310 172,464 148,450" fill="url(#frontStemGrad)" stroke="#1e40af" stroke-width="1.5" />
+
+    <!-- Isometric Top Horizontal Extrusion -->
+    <polygon points="176,204 274,204 266,192 168,192" fill="#1e3a5f" />
+    <polygon points="168,192 266,192 235,160 137,160" fill="url(#isoTopGrad)" />
+
+    <!-- LAYER 2: Back Isometric Chevron Planes -->
+    <polygon points="325,224 366,176 366,218 325,266" fill="#0d2e53" />
+    <polygon points="325,224 366,176 358,168 317,216" fill="#2563eb" />
+
+    <polygon points="280,240 338,240 338,290 280,290" fill="#0c2642" />
+    <polygon points="280,240 338,240 348,228 290,228" fill="#1d4ed8" />
+
+    <!-- LAYER 3: Main Dynamic Soaring Arrow -->
+    <!-- Extruded Lower/Side Body of Arrow -->
+    <path d="M 226 248 L 368 82 L 368 140 L 420 140 L 434 130 L 434 50 L 354 50 L 344 64 L 344 116 L 226 254 Z" fill="url(#arrowBevelGrad)" stroke="#082340" stroke-width="2" />
+
+    <!-- Front Cyan/Sky Blue Arrow Face -->
+    <path d="M 230 252 L 358 102 L 348 102 L 348 70 L 420 70 L 420 142 L 388 142 L 388 132 L 258 284 L 230 252 Z" fill="url(#arrowFaceGrad)" />
+    <!-- Arrow Head Edge Highlight -->
+    <polyline points="348,70 420,70 420,142" fill="none" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" />
+
+    <!-- LAYER 4: Futuristic Network Connectors (Cylindrical Rods) -->
+    <!-- Connection 1: Top-Left Node to Mid-Top Node -->
+    <line x1="150" y1="185" x2="270" y2="162" stroke="url(#connectorGrad)" stroke-width="12" stroke-linecap="round" />
+    <line x1="150" y1="185" x2="270" y2="162" stroke="#ccfbf1" stroke-width="3" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Connection 2: Mid-Left Node to Top-Left Node -->
+    <line x1="90" y1="262" x2="150" y2="185" stroke="url(#connectorGrad)" stroke-width="11" stroke-linecap="round" />
+    <line x1="90" y1="262" x2="150" y2="185" stroke="#ccfbf1" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Connection 3: Central Node to Mid-Left Node -->
+    <line x1="210" y1="270" x2="90" y2="262" stroke="url(#connectorGrad)" stroke-width="11" stroke-linecap="round" />
+    <line x1="210" y1="270" x2="90" y2="262" stroke="#ccfbf1" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Connection 4: Central Node down to Bottom Anchor Node -->
+    <line x1="210" y1="270" x2="204" y2="442" stroke="url(#connectorGrad)" stroke-width="11" stroke-linecap="round" />
+    <line x1="210" y1="270" x2="204" y2="442" stroke="#ccfbf1" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Connection 5: Central Node to Right Bottom Node -->
+    <line x1="210" y1="270" x2="320" y2="370" stroke="url(#connectorGrad)" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Connection 6: Right Bottom Node to Right Upper Node -->
+    <line x1="320" y1="370" x2="365" y2="258" stroke="url(#connectorGrad)" stroke-width="11" stroke-linecap="round" />
+    <line x1="320" y1="370" x2="365" y2="258" stroke="#ccfbf1" stroke-width="2.5" stroke-linecap="round" opacity="0.8" />
+
+    <!-- Connection 7: Bottom Anchor Node to Right Bottom Node -->
+    <line x1="204" y1="442" x2="320" y2="370" stroke="url(#connectorGrad)" stroke-width="10" stroke-linecap="round" />
+
+    <!-- LAYER 5: 3D Spherical Glowing Nodes (Orbs) -->
+    <!-- Mid-Left Orb -->
+    <circle cx="90" cy="262" r="22" fill="url(#sphereDark)" stroke="#083344" stroke-width="2" />
+    
+    <!-- Top-Left Orb -->
+    <circle cx="150" cy="185" r="23" fill="url(#sphereDark)" stroke="#083344" stroke-width="2" />
+
+    <!-- Mid-Top Orb -->
+    <circle cx="270" cy="162" r="22" fill="url(#sphereGlow)" stroke="#115e59" stroke-width="2" />
+
+    <!-- Central Front Glowing Orb -->
+    <circle cx="210" cy="270" r="26" fill="url(#sphereGlow)" stroke="#0f766e" stroke-width="2.5" />
+    <ellipse cx="202" cy="262" rx="7" ry="5" fill="#ffffff" opacity="0.75" />
+
+    <!-- Bottom Stem Anchor Orb -->
+    <circle cx="204" cy="442" r="24" fill="url(#sphereDark)" stroke="#042f2e" stroke-width="2" />
+
+    <!-- Right Bottom Orb -->
+    <circle cx="320" cy="370" r="23" fill="url(#sphereGlow)" stroke="#115e59" stroke-width="2" />
+    <ellipse cx="314" cy="364" rx="6" ry="4" fill="#ffffff" opacity="0.7" />
+
+    <!-- Right High Orb -->
+    <circle cx="365" cy="258" r="23" fill="url(#sphereGlow)" stroke="#115e59" stroke-width="2" />
+    <ellipse cx="359" cy="252" rx="6" ry="4" fill="#ffffff" opacity="0.7" />
+
+  </g>
+</svg>

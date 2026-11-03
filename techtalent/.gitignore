@@ -1,0 +1,2 @@
+# Real SMTP credentials must never be committed
+config/mail_settings.php

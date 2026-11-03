@@ -1,0 +1,114 @@
+/* =====================================================================
+   TechTalent CV Studio: A4 pages, CV templates, editor layout, print
+   ===================================================================== */
+
+/* ---------- A4 page ---------- */
+.cv-pages { --cv-accent: #0f2137; }
+.cv-page {
+    width: 210mm;
+    height: 297mm;
+    box-sizing: border-box;
+    background: #fff;
+    color: #1a1a1a;
+    margin: 0 auto 10mm;
+    box-shadow: 0 4px 18px rgba(15, 33, 55, .14);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-size: 10pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+.cv-page-body { flex: 1 1 auto; overflow: hidden; min-height: 0; }
+.cv-page-no {
+    position: absolute; right: 16mm; bottom: 7mm;
+    font-size: 8pt; color: #777;
+}
+.cv-page h1, .cv-page h2, .cv-page h3, .cv-page p, .cv-page ul { margin: 0; }
+.cv-page ul { padding-left: 4.5mm; }
+.cv-page li { margin: .4mm 0; }
+.cv-page a { color: inherit; text-decoration: none; }
+
+.cv-head { margin-bottom: 4mm; }
+.cv-name { font-size: 21pt; font-weight: 700; line-height: 1.15; }
+.cv-title { font-size: 11.5pt; margin-top: 1mm; }
+.cv-contact { font-size: 9pt; margin-top: 2mm; color: #333; }
+.cv-contact span + span::before { content: " | "; color: #888; }
+.cv-page .cv-h {
+    font-size: 11pt; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .04em; margin: 4.5mm 0 2mm; padding-bottom: .8mm;
+    border-bottom: 1px solid #222;
+}
+.cv-entry { margin-bottom: 0; }
+.cv-entry-end { margin-bottom: 2.6mm; }
+.cv-entry-top { display: flex; justify-content: space-between; gap: 4mm; align-items: baseline; }
+.cv-entry-title { font-weight: 700; }
+.cv-entry-sub { font-style: italic; color: #333; }
+.cv-entry-date { white-space: nowrap; font-size: 9pt; color: #444; }
+.cv-entry-text { margin-top: .8mm; white-space: pre-line; }
+.cv-label { font-weight: 600; font-size: 9pt; margin-top: 1mm; color: #333; }
+.cv-bullets.cont { margin-top: -.4mm; }
+.cv-summary p + p { margin-top: 1.5mm; }
+.cv-skill-row { margin-bottom: 1mm; }
+.cv-skill-row strong { font-weight: 700; }
+.cv-inline-list { margin: 0; }
+
+/* ---------- Classic: traditional serif, centred header ---------- */
+.tpl-classic .cv-page { font-family: Georgia, "Times New Roman", Times, serif; font-variant-numeric: lining-nums; padding: 16mm 18mm 14mm; }
+.tpl-classic .cv-head { text-align: center; }
+.tpl-classic .cv-name { text-transform: uppercase; letter-spacing: .06em; }
+
+/* ---------- Modern: sans-serif with subtle accent ---------- */
+.tpl-modern .cv-page { font-family: Inter, "Segoe UI", Arial, sans-serif; padding: 15mm 17mm 14mm; border-top: 3.5mm solid var(--cv-accent); }
+.tpl-modern .cv-name { color: var(--cv-accent); font-size: 23pt; letter-spacing: -.01em; }
+.tpl-modern .cv-title { color: #444; font-weight: 500; }
+.tpl-modern .cv-head { padding-bottom: 3mm; border-bottom: 1px solid #e3e6ea; }
+.tpl-modern .cv-h { color: var(--cv-accent); border-bottom: 1.5px solid var(--cv-accent); font-size: 10.5pt; letter-spacing: .08em; }
+.tpl-modern .cv-entry-sub { font-style: normal; color: #555; }
+.tpl-modern .cv-entry-date { color: var(--cv-accent); font-weight: 600; }
+
+/* ---------- Minimal: compact, text-focused ---------- */
+.tpl-minimal .cv-page { font-family: Arial, Helvetica, sans-serif; font-size: 9.5pt; line-height: 1.32; padding: 12mm 14mm 12mm; }
+.tpl-minimal .cv-name { font-size: 17pt; }
+.tpl-minimal .cv-title { font-size: 10.5pt; color: #444; }
+.tpl-minimal .cv-head { margin-bottom: 2mm; }
+.tpl-minimal .cv-h { border: 0; font-size: 9.5pt; margin: 3.5mm 0 1.2mm; padding: 0; color: #000; }
+.tpl-minimal .cv-entry-end { margin-bottom: 1.8mm; }
+.tpl-minimal .cv-entry-sub { font-style: normal; }
+
+/* ---------- Preview scaling ---------- */
+.cv-preview-wrap { background: #e9edf2; border-radius: .75rem; padding: 16px; overflow: auto; }
+.cv-scale { transform-origin: top left; }
+.cv-scale .cv-page:last-child { margin-bottom: 0; }
+
+/* ---------- Editor ---------- */
+.cv-editor-panel { max-height: calc(100vh - 170px); overflow-y: auto; }
+.cv-entry-card { border: 1px solid #e2e8f0; border-radius: .6rem; padding: .75rem; margin-bottom: .75rem; background: #fbfcfd; }
+.cv-entry-card .cv-entry-tools { display: flex; gap: .25rem; }
+.cv-section-card .card-header { background: #fff; }
+.cv-skill-item { display: flex; gap: .4rem; align-items: center; margin-bottom: .4rem; }
+.cv-status-pass { color: #198754; }
+.cv-status-warn { color: #b8860b; }
+.cv-status-fail { color: #dc3545; }
+.cv-check-item { border-left: 3px solid transparent; padding: .5rem .75rem; border-radius: .25rem; background: #fff; margin-bottom: .4rem; }
+.cv-check-item.pass { border-color: #198754; }
+.cv-check-item.warn { border-color: #f0ad4e; }
+.cv-check-item.fail { border-color: #dc3545; }
+.cv-tpl-btn.active { box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .35); }
+.cv-sticky { position: sticky; top: 80px; }
+.cv-raw-text { max-height: 360px; overflow: auto; white-space: pre-wrap; font-size: .8rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: .5rem; padding: .75rem; }
+
+/* ---------- Print: only the CV pages, true A4 ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+    html, body { background: #fff !important; margin: 0 !important; padding: 0 !important; min-height: 0 !important; display: block !important; }
+    .no-print, nav.navbar, footer, .footer { display: none !important; }
+    /* Every ancestor of the preview carries .cv-print-root so layout padding/scrolling is neutralised. */
+    .cv-print-root { display: block !important; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; border: 0 !important; box-shadow: none !important; background: none !important; position: static !important; overflow: visible !important; height: auto !important; max-height: none !important; flex: none !important; }
+    .cv-preview-wrap { padding: 0 !important; background: none !important; overflow: visible !important; }
+    .cv-scale { transform: none !important; width: auto !important; height: auto !important; margin: 0 !important; }
+    .cv-page { margin: 0 !important; box-shadow: none !important; break-after: page; page-break-after: always; height: 296.5mm; }
+    .cv-page:last-child { break-after: auto; page-break-after: auto; }
+}
